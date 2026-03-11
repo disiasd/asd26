@@ -5,6 +5,9 @@ Per testare gli algoritmi di ordinamento su array di interi, compilare SortingTe
 - java SortingTest data/list.random.txt quicksort
 - ...
 
+Per testare gli algoritmi di ordinamento generici, compilare GenericSortingTest.java ed eseguire
+- java GenericSortingTest data/list.random.txt
+
 Per generare tutta la documentazione in formato html:
 - creare una directory <i>doc/</i> allo stesso livello delle directory <i>algorithm/</i> e <i>datastructure/</i>
 - entrare nella directory <i>doc/</i>
