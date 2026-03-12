@@ -10,6 +10,21 @@ Per testare gli algoritmi di ordinamento generici, compilare GenericSortingTest.
 - java GenericSortingTest data/list.random.txt
 
 
+Per testare la struttura dati Lista, compilare ListTest.java ed eseguire
+- java ListTest data/ListOperations.txt
+- Confrontare l'ouptut con il contenuto del file data/ListOperations.log.txt
+
+
+Per testare la struttura dati Coda, compilare QueueTest.java ed eseguire
+- java QueueTest data/QueueOperations.txt
+- Confrontare l'ouptut con il contenuto del file data/QueueOperations.log.txt
+
+
+Per testare la struttura dati Pila, compilare StackTest.java ed eseguire
+- java StackTest data/StackOperations.txt
+- Confrontare l'ouptut con il contenuto del file data/StackOperations.log.txt
+
+
 Per generare tutta la documentazione in formato html:
 - creare una directory <i>doc/</i> allo stesso livello delle directory <i>algorithm/</i> e <i>datastructure/</i>
 - entrare nella directory <i>doc/</i>
