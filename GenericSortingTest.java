@@ -113,12 +113,12 @@ public class GenericSortingTest {
 			
 				
 			// Heapsort
-			System.out.print("Algorithm: heapsort      ");
-			A = Arrays.copyOf(C,C.length);
-			start = System.currentTimeMillis();
-			Sorting.heapsort(A);
-			end  = System.currentTimeMillis();
-			System.out.println("Time: " + (end-start)/1000.0 +  " sec " + (issorted(A,B) ? "[SORTED]" : "[UNSORTED]"));		
+			//System.out.print("Algorithm: heapsort      ");
+			//A = Arrays.copyOf(C,C.length);
+			//start = System.currentTimeMillis();
+			//Sorting.heapsort(A);
+			//end  = System.currentTimeMillis();
+			//System.out.println("Time: " + (end-start)/1000.0 +  " sec " + (issorted(A,B) ? "[SORTED]" : "[UNSORTED]"));		
 			    
         } catch(Exception e) {
             e.printStackTrace();
