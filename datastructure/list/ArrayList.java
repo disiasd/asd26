@@ -67,7 +67,7 @@ public class ArrayList<D> implements List<D>,Iterable<D> {
      */
     public boolean search(D data) {
         for(int i = 0; i < size; i++)
-            if((data == null && list[i] == null) || (data != null && data.equals(list[i])))
+            if(equal(data,list[i]))
                 return true;
         return false;
     }
@@ -116,7 +116,7 @@ public class ArrayList<D> implements List<D>,Iterable<D> {
      */
     public boolean delete(D data) {
         for(int i = 0; i < size; i++) 
-            if((data == null && list[i] == null) || (data != null && data.equals(list[i]))) {
+            if(equal(data,list[i])) {
                 leftshift(i);
                 if(--size <= list.length/4)
                     resize(list.length/2);
@@ -170,6 +170,10 @@ public class ArrayList<D> implements List<D>,Iterable<D> {
                 S = S + "[" + (list[i] != null ? list[i].toString() : " ") + "]";
         }
         return S;
+    }
+
+    private boolean equal(Object obj1, Object obj2) {
+        return (obj1 == null && obj2 == null) || (obj1 != null && obj1.equals(obj2)) || (obj2 != null && obj2.equals(obj1));
     }
 
     /* Resize only if the new length is large enough to contain all data */
