@@ -67,7 +67,7 @@ public class ArrayList<D> implements List<D>,Iterable<D> {
      */
     public boolean search(D data) {
         for(int i = 0; i < size; i++)
-            if((data == null && list[i] == null) || (data != null && daita.equals(list[i])))
+            if((data == null && list[i] == null) || (data != null && data.equals(list[i])))
                 return true;
         return false;
     }
