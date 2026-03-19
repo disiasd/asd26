@@ -50,6 +50,8 @@ public class ArrayStack<D> implements Stack<D> {
      * @throws NoSuchElementException if the stack is empty
      */
     public D pop() throws NoSuchElementException {
+        if(top == -1)
+            throw new NoSuchElementException();
         D data       = top();
         stack[top--] = null;
         if(--size <= stack.length/4)
