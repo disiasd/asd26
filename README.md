@@ -24,6 +24,20 @@ Per testare la struttura dati Pila, compilare StackTest.java ed eseguire
 - java StackTest data/StackOperations.txt
 - Confrontare l'ouptut con il contenuto del file data/StackOperations.log.txt
 
+Per testare le strutture dati Albero Binario di Ricerca e Albero AVL compilare TreeTest.java ed eseguire
+- java TreeTest data/TreeOperations.txt BST
+- java TreeTest data/TreeOperations.txt AVL
+- Confrontare l'ouptut con il contenuto del file data/TreeOperations.BST.log.txt per verificare l'implementazione dell'Albero Binario di Ricerca
+- Confrontare l'ouptut con il contenuto del file data/TreeOperations.AVL.log.txt per verificare l'implementazione dell'Albero AVL
+
+Per testare le strutture dati Dizionario implementata con Alberi AVL, compilare DictionaryTest.java ed eseguire
+- java DictionaryTest data/DictionaryOperations.txt AVL
+- Confrontare l'output con il contenuto del file data/DictionaryOperations.AVL.log.txt
+
+Per confrontare i tempi di calcolo di tre differenti implementazioni della struttura dati dizionario, HashMap (libraria Java), HashTable (implementazione con concatenamento) e AVLDictionary (implementazione con Alberi AVL), compilare DictionarySpeedTest.java ed eseguire
+(il parametro intero 1000000 indica il numero di coppie (key,data) generate randomicamente):
+- java DictionarySpeedTest 1000000
+
 
 Per generare tutta la documentazione in formato html:
 - creare una directory <i>doc/</i> allo stesso livello delle directory <i>algorithm/</i> e <i>datastructure/</i>
