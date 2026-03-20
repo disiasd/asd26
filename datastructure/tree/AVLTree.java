@@ -180,11 +180,11 @@ public class AVLTree<K extends Comparable<K>,D> extends BinarySearchTree<K,D> im
          */
         @Override
         public String toString() {
-            String  tag  = (isLeftChild() ? "L" : isRightChild() ? "R" : "ROOT");
+             String  tag  = (isLeftChild() ? "L" : isRightChild() ? "R" : "ROOT");
              if(this.data == null)
-                return tag + "[" + key.toString() + "," + height + "," + balanceFactor() + "]";
-            else
-                return tag + "[" + key.toString() + "," + data.toString() +  "," + height + "," + balanceFactor() + "]";
+                 return tag + "[" + key.toString() + "," + height + "," + balanceFactor() + "]";
+             else
+                 return tag + "[" + key.toString() + "," + data.toString() +  "," + height + "," + balanceFactor() + "]";
         }
 
   }
