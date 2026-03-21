@@ -60,11 +60,11 @@ public class GenericSortingTest {
     Integer A[] = null;
         Integer B[] = null;
         Integer C[] = null;
-        long start, end;
+        long start = 0, end = 0;
 
         
-        if(args.length != 1) {
-            System.err.println("Usage: GenericSortingTest <filename>");
+        if(args.length != 2) {
+            System.err.println("Usage: GenericSortingTest <filename> <sorting algorithm>");
             System.exit(0);
         }
 
@@ -79,47 +79,45 @@ public class GenericSortingTest {
 
         try {
 			
+		    switch(args[1]) {
+                case "selectionsort": 
+                    System.out.print("Algorithm: " + args[1]);
+                    start = System.currentTimeMillis();
+                    Sorting.selectionsort(A);
+                    end  = System.currentTimeMillis();
+                    break;
+                case "insertionsort":
+                    System.out.print("Algorithm: " + args[1]);
+                    start = System.currentTimeMillis();
+                    Sorting.insertionsort(A);
+                    end  = System.currentTimeMillis();
+                    break;
+                case "mergesort":
+                    System.out.print("Algorithm: " + args[1]);
+                    start = System.currentTimeMillis();
+                    Sorting.mergesort(A);
+                    end  = System.currentTimeMillis();
+                    break;
+                case "quicksort":
+                    System.out.print("Algorithm: " + args[1]);
+                    start = System.currentTimeMillis();
+                    Sorting.quicksort(A);
+                    end  = System.currentTimeMillis();
+                    break;
+                case "heapsort":
+                    System.out.print("Algorithm: " + args[1]);
+                    start = System.currentTimeMillis();
+                    Sorting.heapsort(A);
+                    end  = System.currentTimeMillis();
+                    break;
+                default: 
+                    System.err.println("Unknown sorting algorithm: " + args[1]);
+                    System.exit(0);
+                    break;
+            }
+
+            System.out.println(" Time: " + (end-start)/1000.0 +  " sec " + (issorted(A,B) ? "[SORTED]" : "[UNSORTED]"));
 			
-            // Selectionsort
-            System.out.print("Algorithm: selectionsort ");
-            start = System.currentTimeMillis();
-            Sorting.selectionsort(A);
-            end  = System.currentTimeMillis();
-            System.out.println("Time: " + (end-start)/1000.0 +  " sec " + (issorted(A,B) ? "[SORTED]" : "[UNSORTED]"));
-
-            // Insertionsort
-            System.out.print("Algorithm: insertionsort ");
-            A = Arrays.copyOf(C,C.length);
-            start = System.currentTimeMillis();
-            Sorting.insertionsort(A);
-            end  = System.currentTimeMillis();
-            System.out.println("Time: " + (end-start)/1000.0 +  " sec " + (issorted(A,B) ? "[SORTED]" : "[UNSORTED]"));
-
-            // Mergesort
-            System.out.print("Algorithm: mergesort     ");
-            A = Arrays.copyOf(C,C.length);
-            start = System.currentTimeMillis();
-            Sorting.mergesort(A);
-            end  = System.currentTimeMillis();
-            System.out.println("Time: " + (end-start)/1000.0 +  " sec " + (issorted(A,B) ? "[SORTED]" : "[UNSORTED]"));
-
-            // Quicksort
-            System.out.print("Algorithm: quicksort     ");
-            A = Arrays.copyOf(C,C.length);
-            start = System.currentTimeMillis();
-            Sorting.quicksort(A);
-            end  = System.currentTimeMillis();
-            System.out.println("Time: " + (end-start)/1000.0 +  " sec " + (issorted(A,B) ? "[SORTED]" : "[UNSORTED]")); 
-			
-				
-			// Heapsort
-			//System.out.print("Algorithm: heapsort      ");
-			//A = Arrays.copyOf(C,C.length);
-			//start = System.currentTimeMillis();
-			//Sorting.heapsort(A);
-			//end  = System.currentTimeMillis();
-			//System.out.println("Time: " + (end-start)/1000.0 +  " sec " + (issorted(A,B) ? "[SORTED]" : "[UNSORTED]"));		
-			    
         } catch(Exception e) {
             e.printStackTrace();
             System.exit(0);
