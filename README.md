@@ -7,7 +7,9 @@ Per testare gli algoritmi di ordinamento su array di interi, compilare SortingTe
 
 
 Per testare gli algoritmi di ordinamento generici, compilare GenericSortingTest.java ed eseguire
-- java GenericSortingTest data/list.random.txt
+- java GenericSortingTest data/list.random.txt mergesort
+- java GenericSortingTest data/list.random.txt quicksort
+- ...
 
 
 Per testare la struttura dati Lista, compilare ListTest.java ed eseguire
