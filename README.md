@@ -5,22 +5,18 @@ Per testare gli algoritmi di ordinamento su array di interi, compilare SortingTe
 - java SortingTest data/list.random.txt quicksort
 - ...
 
-
 Per testare gli algoritmi di ordinamento generici, compilare GenericSortingTest.java ed eseguire
 - java GenericSortingTest data/list.random.txt mergesort
 - java GenericSortingTest data/list.random.txt quicksort
 - ...
 
-
 Per testare la struttura dati Lista, compilare ListTest.java ed eseguire
 - java ListTest data/ListOperations.txt
 - Confrontare l'ouptut con il contenuto del file data/ListOperations.log.txt
 
-
 Per testare la struttura dati Coda, compilare QueueTest.java ed eseguire
 - java QueueTest data/QueueOperations.txt
 - Confrontare l'ouptut con il contenuto del file data/QueueOperations.log.txt
-
 
 Per testare la struttura dati Pila, compilare StackTest.java ed eseguire
 - java StackTest data/StackOperations.txt
@@ -40,6 +36,9 @@ Per confrontare i tempi di calcolo di tre differenti implementazioni della strut
 (il parametro intero 1000000 indica il numero di coppie (key,data) generate randomicamente):
 - java DictionarySpeedTest 1000000
 
+Per testare le strutture dati PriorityQueue, compilare PriorityQueueTest.java ed eseguire
+- java PriorityQueueTest data/words.txt data/orderedWords.txt
+- produrrà il file data/orderedWords.txt che conterrà tutte le parole nel file data/words.txt ordinate in modo non decrescente rispetto alla loro lunghezza
 
 Per generare tutta la documentazione in formato html:
 - creare una directory <i>doc/</i> allo stesso livello delle directory <i>algorithm/</i> e <i>datastructure/</i>
