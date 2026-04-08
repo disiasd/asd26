@@ -40,6 +40,10 @@ Per testare le strutture dati PriorityQueue, compilare PriorityQueueTest.java ed
 - java PriorityQueueTest data/words.txt data/orderedWords.txt
 - produrrà il file data/orderedWords.txt che conterrà tutte le parole nel file data/words.txt ordinate in modo non decrescente rispetto alla loro lunghezza
 
+Per testare le strutture dati UnionFind, compilare UnionFindTest.java ed eseguire
+- java UnionFindTest data/roadNET-TX.txt
+- elaborerà la descrizione delle strade del Texas descritte come collegamenti fra incroci (numerati da 0 a 1393382). Successivamente, da terminale si possono inserire coppie di incroci, e il programma indicherà se tali incroci sono collegati oppure no. Ad esempio, potete provare con le coppie 1393132, 1393133 e 1393132,432567 che sono rispettivamente collegate e non collegate. Per testare le quattro possibili implementazioni bisogna modificare il file UnionFindTest.java alla riga 72, eseguendo una new su QuickFind, QuickUnion, QuickFindSize, QuickUnionRank. Attenzione, l'implementazione QuickFind impiega molto più tempo rispetto a tutte le altre per completare l'analisi del file di input.
+
 Per generare tutta la documentazione in formato html:
 - creare una directory <i>doc/</i> allo stesso livello delle directory <i>algorithm/</i> e <i>datastructure/</i>
 - entrare nella directory <i>doc/</i>
