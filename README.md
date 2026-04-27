@@ -48,6 +48,10 @@ Per testare l'implementazione dei grafi, compilare GraphTest.java ed eseguire
 - java GraphTest data/grafo.txt 
 - produrrà un grafo non orientato completo con 3 vertici e lo stamperà, poi rimuoverà il primo arco del primo vertice e lo ristamperà e poi rimuoverà completamente il primo vertice e lo ristamperà
 
+Per testare l'implementazione delle visite dei grafi, compilare GraphVisitTest.java ed eseguire
+- java -Xss1g GraphVisitTest data/roadNet-TX.txt
+- leggerà il file data/roadNet-TX.txt poi stamperà il grafo letto, l'albero di visita BFS partendo dal vertice 0, e l'albero di visita DFS. Serve aumentare lo spazio dedicato allo stack tramite -Xss1g in modo tale da evitare errori di tipo StackOverflow durante l'esecuzione ricorsiva della DFS
+
 Per generare tutta la documentazione in formato html:
 - creare una directory <i>doc/</i> allo stesso livello delle directory <i>algorithm/</i> e <i>datastructure/</i>
 - entrare nella directory <i>doc/</i>
