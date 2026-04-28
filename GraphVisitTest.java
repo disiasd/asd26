@@ -62,20 +62,9 @@ public class GraphVisitTest {
 			System.out.println("GRAFO LETTO DA FILE");
 			System.out.println(g.toString());
 			
-			/*ArrayList<Vertex<Integer>> vert = g.vertexes();
-			for (int i=0; i<g.vertexNum(); i++) {
-				System.out.println("Adiacenti a: "+(vert.get(i)).getData() );
-				ArrayList<Edge<Integer>> archi = g.outEdges(vert.get(i));
-				for (int j=0; j<g.outDegree(vert.get(i)); j++) {
-					System.out.print( "  "+ ((archi.get(j)).getDest()).getData() );
-				}
-				System.out.println();
-			}*/
-			
 			//versione BFS
 			System.out.println("ALBERO DI VISITA BFS (vertice, padre nell'albero di visita, distanza)");
-			Traversal<Integer> visBFS = 
-				new BFS<Integer>();
+			Traversal<Integer> visBFS = new BFS<Integer>();
 			ArrayList<VisitedVertex<Integer>> l1 = visBFS.visit(g,nodi.get(0));
 			for (int i=0; i<l1.size(); i++) {
 				VisitedVertexBFS<Integer> vv = (VisitedVertexBFS<Integer>) l1.get(i);
@@ -84,8 +73,7 @@ public class GraphVisitTest {
 					vv.getDistance()); 
 			}
 			
-			//System.out.println("Numero vertici visitato: "+l1.size());	
-			
+			/*			
 			//versione DFS
 			System.out.println();
 			System.out.println("ALBERO DI VISITA DFS (vertice, padre nell'albero di visita, discovery time, finish time)");
@@ -98,6 +86,7 @@ public class GraphVisitTest {
 					((vv.getParent() != null) ? vv.getParent().getVertex().getData() : -1) +
 					" "+vv.getDiscoveryTime()+" "+vv.getFinishTime());	
 			}
+			*/	
 					
 		} catch (IOException e) {
 			e.printStackTrace();
