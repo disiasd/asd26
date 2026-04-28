@@ -28,35 +28,10 @@ public class BFS<D> implements Traversal<D> {
 	 * @return the ArrayList with the visited vertexes
 	 */	
 	public ArrayList<VisitedVertex<D>> visit(Graph<D> graph, Vertex<D> source) {
-		VisitedVertexBFS<D> u;
-		Vertex<D> v;
-		ArrayList<Edge<D>> adj;
-		Map<Vertex<D>, Boolean> visited = new HashMap<Vertex<D>, Boolean>();
-		ArrayList<VisitedVertex<D>> l = new ArrayList<VisitedVertex<D>>();
-		Queue<VisitedVertexBFS<D>> q = new ArrayDeque<VisitedVertexBFS<D>>();	
-			
-		ArrayList<Vertex<D>> vert = graph.vertexes();	
-		for (int i=0; i<vert.size(); i++) {
-			visited.put(vert.get(i), false);
-		}
-		visited.put(source, true);
-		VisitedVertexBFS<D> visitedVertex = new VisitedVertexBFS<D>(source,null,0);
-		l.add(visitedVertex);
-		q.add(visitedVertex);
-		while (!q.isEmpty()) {
-			u = q.remove();
-			adj = graph.outEdges(u.getVertex());
-			for (int j=0; j<adj.size(); j++) {
-				v = (adj.get(j)).getDest();
-				if (!visited.get(v)) {
-					visited.put(v,true);
-					visitedVertex = new VisitedVertexBFS<D>(v,u,u.dist + 1);
-					l.add(visitedVertex);
-					q.add(visitedVertex);
-				}
-			}			
-		}
-		return l;
+
+
+
+		return null;
 	}
 		
 }
