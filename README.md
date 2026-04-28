@@ -52,6 +52,10 @@ Per testare l'implementazione delle visite dei grafi, compilare GraphVisitTest.j
 - java GraphVisitTest data/roadNet-TX.txt
 - leggerà il file data/roadNet-TX.txt poi stamperà il grafo letto e l'albero di visita BFS partendo dal vertice 0. Successivamente, per testare anche la visita DFS, decommentare da riga 76 a riga 89, ricompilare ed eseguire con "java -Xss1g GraphVisitTest data/roadNet-TX.txt" per calcolare e stampare anche l'albero di visita DFS. Il parametro -Xss1g serve per aumentare lo spazio dedicato allo stack in modo tale da evitare errori di tipo StackOverflow durante l'esecuzione ricorsiva della DFS
 
+Per testare l'implementazione degli algoritmi per il calcolo del MST, compilare MSTTest.java ed eseguire
+- java MSTTest data/grafoMST.txt 
+- leggerà dal file grafoMST.txt un grafo scaricato da Kaggle (https://www.kaggle.com/datasets/anshikasharmacseai/500-cities-distance-daatset) usato come test di algoritmi per il MST, poi stamperà il minimum spanning tree calcolato ed il suo costo totale. Per testare le possibili implementazioni bisogna modificare il file MSTTest.java alla riga 82, eseguendo una new su Kruskal e Prim.
+
 Per generare tutta la documentazione in formato html:
 - creare una directory <i>doc/</i> allo stesso livello delle directory <i>algorithm/</i> e <i>datastructure/</i>
 - entrare nella directory <i>doc/</i>
