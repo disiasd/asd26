@@ -56,6 +56,10 @@ Per testare l'implementazione degli algoritmi per il calcolo del MST, compilare 
 - java MSTTest data/grafoMST.txt 
 - leggerà dal file grafoMST.txt un grafo scaricato da Kaggle (https://www.kaggle.com/datasets/anshikasharmacseai/500-cities-distance-daatset) usato come test di algoritmi per il MST, poi stamperà il minimum spanning tree calcolato ed il suo costo totale. Per testare le possibili implementazioni bisogna modificare il file MSTTest.java alla riga 82, eseguendo una new su Kruskal e Prim.
 
+Per testare l'implementazione degli algoritmi per il calcolo dei cammini minimi da singola sorgente, compilare ShortestPathTest.java ed eseguire
+- java ShortestPathTest data/grafoMST.txt 
+- leggerà il grafo rappresentato nel file grafoMST.txt, poi stamperà le distanze dei vertici rispetto al vertice di partenza 0 ed il tempo di esecuzione dell'algoritmo di ricerca dei cammini minimi. Per testare le possibili implementazioni bisogna modificare il file ShortestPathTest.java alla riga 79, eseguendo una new su BellmanFord e Dijkstra.
+
 Per generare tutta la documentazione in formato html:
 - creare una directory <i>doc/</i> allo stesso livello delle directory <i>algorithm/</i> e <i>datastructure/</i>
 - entrare nella directory <i>doc/</i>
