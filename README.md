@@ -60,6 +60,10 @@ Per testare l'implementazione degli algoritmi per il calcolo dei cammini minimi 
 - java ShortestPathTest data/grafoMST.txt 
 - leggerà il grafo rappresentato nel file grafoMST.txt, poi stamperà le distanze dei vertici rispetto al vertice di partenza 0 ed il tempo di esecuzione dell'algoritmo di ricerca dei cammini minimi. Per testare le possibili implementazioni bisogna modificare il file ShortestPathTest.java alla riga 79, eseguendo una new su BellmanFord e Dijkstra.
 
+Per testare l'implementazione dell'algoritmo di Floyd-Warshall compilare AllPairsShortestPathTest.java ed eseguire
+- java AllPairsShortestPathTest data/grafoMST.txt 
+- leggerà il grafo rappresentato nel file grafoMST.txt, calcolerà tutti i cammini minimi per ogni coppia di vertici, e poi si concentrerà solo sul vertice di partenza 0 e stamperà le distanze di tutti i vertici da esso (in modo tale da produrre lo stesso output del test dei cammini minimi da singola sorgente).
+
 Per generare tutta la documentazione in formato html:
 - creare una directory <i>doc/</i> allo stesso livello delle directory <i>algorithm/</i> e <i>datastructure/</i>
 - entrare nella directory <i>doc/</i>
