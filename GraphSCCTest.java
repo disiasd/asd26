@@ -2,21 +2,21 @@
 *
 * Compilare con
 *
-* javac GraphVisitTest.java
+* javac GraphSCCTest.java
 *
 * Eseguire con
 *
-* javac GraphVisitTest.java <FILENAME>
+* java GraphSCCTest <FILENAME>
 *
 * FILENAME e' il nome di un file che contiene la descrizione di un grafo:
 * ad ogni riga del file si riportano gli indici di due nodi collegati da un arco
 * separati da un TAB. 
-* Dopo aver letto il grafo, lo crea, lo stampa, effettua sia una BFS che una DFS 
-* e stampa i risultati.
+* Dopo aver letto il grafo, lo crea, lo stampa, ricerca le componente fortemente
+* connesse e stampa per ogni vertice la relativa componente
 *
 * Nel caso di grafi di grosse dimensioni puo' essere utile eseguire il programma
 * con stack aumentato, ad esempio:
-* java -Xss1g GraphVisitTest data/roadNet-TX.txt
+* java -Xss1g GraphSCCTest data/roadNet-TX.txt
 */
 
 import java.io.*;
@@ -64,7 +64,7 @@ public class GraphSCCTest {
 			System.out.println("GRAFO LETTO DA FILE");
 			System.out.println(g.toString());
 						
-			System.out.println("Eseguo Tarjan: vertice , indice componente");
+			System.out.println("Calcolo delle componenti fortemente connesse: vertice , indice componente");
 			SCC<Integer> connection = new SCCcompute<Integer>();
 			Map<Vertex<Integer>,Integer> scc = connection.StronglyConnectedComponents(g);
 			for (int i=0; i<nodi.size(); i++) {
