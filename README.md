@@ -64,6 +64,64 @@ Per testare l'implementazione dell'algoritmo di Floyd-Warshall compilare AllPair
 - java AllPairsShortestPathTest data/grafoMST.txt 
 - leggerà il grafo rappresentato nel file grafoMST.txt, calcolerà tutti i cammini minimi per ogni coppia di vertici, e poi si concentrerà solo sul vertice di partenza 0 e stamperà le distanze di tutti i vertici da esso (in modo tale da produrre lo stesso output del test dei cammini minimi da singola sorgente).
 
+## Progetto: Componenti Fortemente Connesse (SCC)
+
+### Descrizione
+
+Il progetto consiste nell'implementazione di un algoritmo per il calcolo delle **Componenti Fortemente Connesse** (Strongly Connected Components, SCC) di un grafo orientato.
+
+### File rilevanti
+
+| File | Ruolo |
+|------|-------|
+| `algorithm/graph/SCC/SCC.java` | Interfaccia che definisce il metodo `StronglyConnectedComponents` — **non modificare** |
+| `algorithm/graph/SCC/SCCcompute.java` | Classe scheletro da **implementare**: il metodo restituisce attualmente `null` |
+| `GraphSCCTest.java` | Programma di test già pronto — **non modificare** |
+
+### Cosa implementare
+
+Nella classe `SCCcompute<D>` (file `algorithm/graph/SCC/SCCcompute.java`), completate il metodo:
+
+```java
+public Map<Vertex<D>, Integer> StronglyConnectedComponents(Graph<D> graph)
+```
+
+Il metodo deve restituire una `Map` che associa ad ogni `Vertex<D>` del grafo un `Integer` che rappresenta l'**indice** della sua componente fortemente connessa. Vertici che appartengono alla **stessa** componente devono avere lo **stesso** indice; vertici di componenti diverse devono avere indici diversi.
+
+
+### Compilazione
+
+Dalla **directory radice** del package (quella contenente `GraphSCCTest.java`), compilare con:
+
+```bash
+javac GraphSCCTest.java
+```
+
+Questo compila automaticamente anche tutti i file dipendenti (`SCC.java`, `SCCcompute.java` e le classi del package `datastructure`).
+
+### Esecuzione
+
+```bash
+java GraphSCCTest data/roadNet-TX.txt
+```
+
+Il programma:
+1. Legge il grafo dal file `data/roadNet-TX.txt` (archi tab-separati, uno per riga)
+2. Costruisce il grafo orientato corrispondente
+3. Invoca il vostro metodo `StronglyConnectedComponents`
+4. Stampa per ogni vertice: `<dato_vertice> , <indice_SCC>`
+
+
+**Nota sul dataset:** nel file `data/roadNet-TX.txt` la stragrande maggioranza dei vertici appartiene alla medesima componente (componente gigante), ma esistono centinaia di altre piccole componenti.
+
+### Gestione dello StackOverflow su grafi grandi
+
+Se la vostra implementazione è **ricorsiva**, su grafi di grandi dimensioni può verificarsi un errore `StackOverflowError`. In tal caso, aumentare lo spazio dedicato allo stack con il parametro `-Xss`:
+
+```bash
+java -Xss1g GraphSCCTest data/roadNet-TX.txt
+```
+
 Per generare tutta la documentazione in formato html:
 - creare una directory <i>doc/</i> allo stesso livello delle directory <i>algorithm/</i> e <i>datastructure/</i>
 - entrare nella directory <i>doc/</i>
